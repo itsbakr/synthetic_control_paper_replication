@@ -141,7 +141,7 @@ If you use this replication, please cite:
 
 **Ahmed Bakr**  
 CS130 - Causal Inference  
-December 2024
+December 2025
 
 ## License
 
