@@ -23,9 +23,6 @@ if (!require("Synth")) install.packages("Synth", repos = "http://cran.us.r-proje
 library(foreign)
 library(Synth)
 
-# Set working directory to project root
-# setwd("/Users/ahmedbakr/Documents/Minerva/CS130/synthetic_control_replication")
-
 # Load Data
 d <- read.dta("data/repgermany.dta")
 
@@ -312,8 +309,8 @@ colnames(storegaps)[1] <- "West Germany"
 # Function to compute RMSE
 rmse <- function(x) sqrt(mean(x^2))
 
-# Pre-reunification period: 1960-1989 (rows 1-30)
-# Post-reunification period: 1990-2003 (rows 31-44)
+# Pre-reunification period: 1960-1989 
+# Post-reunification period: 1990-2003 
 preloss <- apply(storegaps[1:30, ], 2, rmse)
 postloss <- apply(storegaps[31:44, ], 2, rmse)
 rmspe_ratio <- postloss / preloss
